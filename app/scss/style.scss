@@ -1,0 +1,137 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+   padding: 30px 30px 45px;
+   max-width: 1770px;
+   margin: 0 auto;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+}
+
+.logo {
+   display: flex;
+   &__image {
+      margin-right: 10px;
+   }
+
+   &__text {
+      @extend %Rubik-500;
+      font-size: 36px;
+      line-height: 58px;
+      color: $default;
+   }
+}
+
+.menu {
+   &__list {
+      display: flex;
+   }
+
+   &__list-item + .menu__list-item {
+      margin-left: 15px;
+   }
+
+   &__list-link {
+      @extend %Rubik-500;
+      font-size: 15px;
+      line-height: 12px;
+      color: $default;
+      transition: all 0.1s;
+      &:hover {
+         color: $accent;
+         border-bottom: 1px solid $accent;
+         @extend %Poppins-700;
+      }
+   }
+
+   &__list-link--active {
+      @extend %Poppins-700;
+      color: $accent;
+      border-bottom: 1px solid $accent;
+   }
+}
+.user-nav {
+   display: flex;
+   &__link {
+      position: relative;
+   }
+   &__link + .user-nav__link {
+      margin-left: 15px;
+   }
+
+   &__link-num {
+      position: absolute;
+      top: -9px;
+      right: -14px;
+      background-color: #fff;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      @extend %DMSans-400;
+      font-size: 10px;
+      line-height: 27px;
+      color: #243f4d;
+   }
+   &__link--search {
+      background-image: url("../images/icons/ellipse-search.svg");
+      width: 52px;
+      height: 52px;
+      position: relative;
+   }
+   &__link--search::after {
+      content: "";
+      width: 17px;
+      height: 17px;
+      background-image: url("../images/icons/search.svg");
+      top: 16px;
+      left: 17px;
+      position: absolute;
+   }
+   &__link--heart {
+      background-image: url("../images/icons/rectangle.svg");
+      width: 52px;
+      height: 52px;
+      position: relative;
+   }
+   &__link--heart::after {
+      content: "";
+      width: 17px;
+      height: 17px;
+      background-image: url("../images/icons/heart.svg");
+      top: 16px;
+      left: 17px;
+      position: absolute;
+   }
+   &__link--heart::before {
+      content: "";
+      width: 17px;
+      height: 17px;
+      background-image: url("../images/icons/.svg");
+      top: 16px;
+      left: 17px;
+      position: absolute;
+   }
+   &__link--icon {
+      background-image: url("../images/icons/ellipse.svg");
+      width: 52px;
+      height: 52px;
+      position: relative;
+   }
+   &__link--icon::after {
+      content: "";
+      width: 23px;
+      height: 24px;
+      background-image: url("../images/icons/el.svg");
+      top: 13px;
+      left: 15px;
+      position: absolute;
+   }
+}
+
+@import "media";
