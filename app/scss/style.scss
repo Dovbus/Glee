@@ -143,4 +143,57 @@
    }
 }
 
+.footer {
+   background-color: #fff;
+}
+
+.footer-top {
+   display: flex;
+
+   &__item {
+   }
+
+   &__item--contact {
+   }
+
+   &__address {
+   }
+
+   &__phone {
+   }
+
+   &__email {
+   }
+
+   &__item--services {
+   }
+
+   &__title {
+   }
+
+   &__list {
+   }
+
+   &__link {
+   }
+
+   &__item--nav {
+   }
+
+   &__item--form {
+   }
+
+   &__text {
+   }
+
+   &__form {
+   }
+
+   &__input {
+   }
+
+   &__btn {
+   }
+}
+
 @import "media";
