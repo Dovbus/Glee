@@ -1,10 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
-   padding: 30px 30px 45px;
+   padding: 30px 30px 30px;
    &__inner {
       display: flex;
       justify-content: space-between;
@@ -251,6 +252,111 @@
          position: absolute;
          top: -2px;
          left: -12px;
+      }
+   }
+}
+
+.top-slider {
+   background-color: $accent;
+   padding: 150px 0 200px;
+   &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../images/ellipse.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 575px;
+      height: 585px;
+      top: 180px;
+      right: 50px;
+   }
+   &__item {
+      display: flex !important;
+      justify-content: space-around;
+      padding: 0 70px;
+   }
+   &__content {
+      max-width: 415px;
+   }
+   &__title {
+      @extend %Rubik-500;
+      font-size: 72px;
+      line-height: 70px;
+      color: $default;
+      margin-bottom: 35px;
+   }
+   &__text {
+      @extend %Rubik-400;
+      font-size: 18px;
+      line-height: 30px;
+      color: $default;
+      margin-bottom: 35px;
+   }
+   &__link {
+      @extend %Rubik-500;
+      font-size: 15px;
+      line-height: 12px;
+      color: #ffffff;
+      background-color: #a3bbc8;
+      padding: 20px 90px 20px 25px;
+      transition: all 0.3s;
+      display: inline-block;
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         background-image: url("../images/icons/arrow.svg");
+         background-size: cover;
+         background-repeat: no-repeat;
+         width: 22px;
+         height: 9px;
+         top: 22px;
+         right: 10px;
+      }
+   }
+   &__photo {
+      align-self: flex-end;
+      position: relative;
+   }
+}
+.slick-dots {
+   display: flex;
+   justify-content: center;
+   li {
+      padding: 0 5px;
+      line-height: 0;
+      margin-top: 150px;
+      button {
+         padding: 0;
+         font-size: 0;
+         background-color: transparent;
+         height: 30px;
+         width: 29px;
+         border: 1px solid transparent;
+         border-radius: 50%;
+         position: relative;
+         cursor: pointer;
+         &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: $default;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
+      }
+      &.slick-active {
+         button {
+            border-color: $default;
+            background-color: #fff;
+            opacity: 0.9;
+            &::before {
+               background-color: $default;
+            }
+         }
       }
    }
 }
