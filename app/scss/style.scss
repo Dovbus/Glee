@@ -142,6 +142,53 @@
    }
 }
 
+.info{
+   &__inner{
+      padding: 45px 0;
+      background-color: rgba(252, 215, 182, 0.2);
+      display: flex;
+      justify-content: space-around;
+
+   }
+   &__item{
+      display: flex;
+   }
+   &__item-desc{
+      margin-left: 23px;
+   }
+   &__item-title{
+      @extend %DMSans-700;
+      font-size: 18px;
+      line-height: 20px;
+      color: #414141;
+      margin-bottom: 10px;
+   }
+   &__item-text{
+      @extend %DMSans-400;
+      font-size: 16px;
+      line-height: 20px;
+      color: #585858;
+   }
+}
+
+.video{
+   padding: 110px 0;
+   &__inner{
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+   }
+   &__popup{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+   }
+   &__play{
+      cursor: pointer;
+   }
+}
+
 .footer {
    background-color: #fff;
 }
