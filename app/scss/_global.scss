@@ -37,3 +37,25 @@ body {
    max-width: 1500px;
    margin: 0 auto;
 }
+
+.title{
+   text-align: center;
+   @extend  %DMSans-700;
+   font-size: 36px;
+   line-height: 1.2;
+   color: $title;
+   padding-bottom: 30px;
+}
+
+.product__filter-btn{
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   @extend  %DMSans-700;
+   font-size: 16px;
+   line-height: 1.2;
+   color: #8b8b8b;
+   &:hover{
+      color: $title;
+   }
+}
